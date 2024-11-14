@@ -3,11 +3,9 @@
 CREATE SCHEMA IF NOT EXISTS `ultramixrh` DEFAULT CHARACTER SET utf8mb4 ;
 USE `ultramixrh` ;
 
-create table if not exists login (id int not null auto_increment primary key, usuario varchar(50), senha varchar(255));
-
-select * from login;
-
-insert into login (usuario, senha) values('admin', '123456');
+create table if not exists login (id int not null auto_increment primary key, 
+usuario varchar(50),
+ senha varchar(255));
 
 CREATE TABLE IF NOT EXISTS funcionarios (
 	id INT(11) NOT NULL AUTO_INCREMENT,
@@ -38,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `ultramixrh`.`banco_horas` (
   `funcionario_id` INT(11) NOT NULL,
   `horas_em_banco` INT(11),
   `ferias` VARCHAR(40),
-  `licencas` VARCHAR(40),
+  `licencas` VARCHAR(200),
   PRIMARY KEY (`id`),
     FOREIGN KEY (`funcionario_id`)
     REFERENCES `ultramixrh`.`funcionarios` (`id`));
@@ -57,7 +55,7 @@ CREATE TABLE IF NOT EXISTS `ultramixrh`.`fornecedores` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(50),
   `produto` VARCHAR(50),
-  `CNPJ` INT(14),
+  `CNPJ` INT(20),
   `telefone` VARCHAR(14),
   `email` VARCHAR(50),
   `ultima_remessa` DATE,
@@ -95,8 +93,8 @@ CREATE TABLE IF NOT EXISTS `ultramixrh`.`folha_pagamento` (
 CREATE TABLE IF NOT EXISTS `ultramixrh`.`folha_ponto` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `funcionario_id` INT(11) NOT NULL,
-  `horario_chegada` DATETIME,
-  `horario_saida` DATETIME,
+  `horario_chegada` TIME,
+  `horario_saida` TIME,
   `horas` TIME GENERATED ALWAYS AS (timediff(`horario_saida`,`horario_chegada`)) STORED,
   PRIMARY KEY (`id`),
     FOREIGN KEY (`funcionario_id`)
