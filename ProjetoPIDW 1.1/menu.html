@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">    
+    <title>Painel Administrador</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Sidebar Section -->
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                    <img src="img/lupa-removebg-preview.png">
+                    <h2>Analise<span class="danger">Dados</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">
+                        close
+                    </span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+
+
+                <a href="#" class="active">
+                    <h3>Painel Geral</h3>
+                </a>
+                <a href="#">
+                    <h3>Contratos</h3>
+                </a>
+                <a href="#">
+                    <h3>Banco de Horas</h3>
+                </a>
+                <a href="visao/formularios/funcionarios/cadastrarfuncionario.php">
+                    
+                    <h3>Cadastrar Funcionário</h3>
+                </a>
+                <a href="visao/formularios/funcionarios/alterarfuncionario.php">
+                    
+                    <h3>Alterar Funcionario</h3>
+                </a>
+                <a href="visao/formularios/funcionarios/listarfuncionarios.php">
+                    
+                    <h3>Listar Funcionários</h3>
+                </a>
+                <a href="visao/formularios/login/cadastrarlogin.php">
+                    
+                    <h3>Cadastrar Login</h3>
+                </a>
+                <a href="visao/formularios/login/listarlogin.php">
+                    
+                    <h3>Listar Login</h3>
+                </a>
+                <a href="visao/formularios/login/excluirlogin.php">
+                    
+                    <h3>Remover Login</h3>
+                </a>
+
+                <a href="visao/formularios/fornecedores/cadastrarfornecedor.php">
+                    
+                    <h3>Cadastro de Fornecedor</h3>
+                </a>
+
+                
+                <a href="#">
+
+
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+        <!-- End of Sidebar Section -->
+
+        <!-- Main Content -->
+        <main>
+            <!-- Analyses -->
+            <div class="analyse">
+                <div class="sales">
+                    <div class="status">
+                        <div class="info">
+                            <h3>Vendas Totais</h3>
+                            <h1>R$ 10.024</h1>
+                        </div>
+                        <div class="progresss">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="percentage">
+                                <p>+81%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="visits">
+                    <div class="status">
+                        <div class="info">
+                            <h3>Ajuste Salarial</h3>
+                            <h1>24,981</h1>
+                        </div>
+                        <div class="progresss">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="percentage">
+                                <p>-48%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="searches">
+                    <div class="status">
+                        <div class="info">
+                            <h3>Progresso</h3>
+                            <h1>14,147</h1>
+                        </div>
+                        <div class="progresss">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="percentage">
+                                <p>+21%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="new-users">
+                <h2>Novos usuários</h2>
+                <div class="user-list">
+                    <div class="user">
+                        <img src="img/usuario-removebg-preview.png">
+                        <h2>Beatriz</h2>
+                        
+                    </div>
+                    <div class="user">
+                        <img src="img/usuario-removebg-preview.png">
+                        <h2>Lucas</h2>
+                       
+                    </div>
+                    <div class="user">
+                        <img src="img/usuario-removebg-preview.png">
+                        <h2>Marcos</h2>
+                        
+                    </div>
+                    <div class="user">
+                        <img src="img/mais-removebg-preview.png">
+                        <h2>Mais</h2>
+                        <p>Novo Cadastro</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recent-orders">
+                <h2>Cadastros Recentes</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>ID Cadastro</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <a href="#">Mostrar Mais</a>
+            </div>
+
+        </main>
+
+        <div class="right-section">
+            <div class="nav">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">
+                        menu
+                    </span>
+                </button>
+                <div class="dark-mode">
+                    <span class="material-icons-sharp active">
+                        light_mode
+                    </span>
+                    <span class="material-icons-sharp">
+                        dark_mode
+                    </span>
+                </div>
+
+                <div class="profile">
+                    <div class="info">
+                        <p>Olá,<b>Administrador</b></p>
+                        <small class="text-muted">Admin</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="img/usuario-removebg-preview.png">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="user-profile">
+                <div class="logo">
+                    <img src="images/logo.png">
+                    <h2>Dashboard De Gestão</h2>
+                    <p>Fullstack Web Developer</p>
+                </div>
+            </div>
+
+            <div class="reminders">
+                <div class="header">
+                    <h2>Lembretes</h2>
+                    <span class="material-icons-sharp">
+                        notifications_none
+                    </span>
+                </div>
+
+                <div class="notification">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            volume_up
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Conferir Banco de Horas</h3>
+                        </div>
+                        <span class="material-icons-sharp">
+                            more_vert
+                        </span>
+                    </div>
+                </div>
+
+                <div class="notification deactive">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            edit
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Atualização de Contratos</h3>
+                        </div>
+                        <span class="material-icons-sharp">
+                            more_vert
+                        </span>
+                    </div>
+                </div>
+
+                <div class="notification add-reminder">
+                    <div>
+                        <span class="material-icons-sharp">
+                            add
+                        </span>
+                        <h3>Adicionar Lembrete</h3>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <script src="orders.js"></script>
+    <script src="menu.js"></script>
+</body>
+
+</html>
